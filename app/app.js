@@ -138,9 +138,82 @@
   var CRISIS = ['suicid', 'matarme', 'quitarme la vida', 'no quiero vivir', 'quiero morir', 'quiero morirme', 'hacerme dano', 'lastimarme', 'acabar con todo', 'mejor muerto', 'mejor muerta', 'no vale la pena vivir'];
   var SAFETY = 'Si pensás en hacerte daño, pedí ayuda ahora: llamá al 135 (Buenos Aires y Gran Buenos Aires) o al 911. Si podés, avisale a alguien cercano que esté con vos.';
 
+  /* ---------- Guía: versículos, tips, rutina y recomendaciones ---------- */
+  var VERSES = [
+    ['«Jehová es mi pastor; nada me faltará.»', 'Salmo 23:1'],
+    ['«Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.»', 'Josué 1:9'],
+    ['«Dios es nuestro amparo y fortaleza, nuestro pronto auxilio en las tribulaciones.»', 'Salmo 46:1'],
+    ['«Los que esperan a Jehová tendrán nuevas fuerzas; levantarán alas como las águilas; correrán, y no se cansarán; caminarán, y no se fatigarán.»', 'Isaías 40:31'],
+    ['«Nuevas son cada mañana; grande es tu fidelidad.»', 'Lamentaciones 3:23'],
+    ['«Mi socorro viene de Jehová, que hizo los cielos y la tierra.»', 'Salmo 121:2'],
+    ['«La paz os dejo, mi paz os doy; yo no os la doy como el mundo la da. No se turbe vuestro corazón, ni tenga miedo.»', 'Juan 14:27'],
+    ['«Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis.»', 'Jeremías 29:11'],
+    ['«Encomienda a Jehová tu camino, y confía en él; y él hará.»', 'Salmo 37:5'],
+    ['«Bástate mi gracia; porque mi poder se perfecciona en la debilidad.»', '2 Corintios 12:9'],
+    ['«Sobre toda cosa guardada, guarda tu corazón; porque de él mana la vida.»', 'Proverbios 4:23'],
+    ['«Este es el día que hizo Jehová; nos gozaremos y alegraremos en él.»', 'Salmo 118:24'],
+    ['«No os afanéis por el día de mañana, porque el día de mañana traerá su afán. Basta a cada día su propio mal.»', 'Mateo 6:34'],
+    ['«Echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.»', '1 Pedro 5:7'],
+    ['«Echa sobre Jehová tu carga, y él te sustentará; no dejará para siempre caído al justo.»', 'Salmo 55:22'],
+    ['«Todo lo puedo en Cristo que me fortalece.»', 'Filipenses 4:13'],
+    ['«Por la noche durará el lloro, y a la mañana vendrá la alegría.»', 'Salmo 30:5'],
+    ['«Gozosos en la esperanza; sufridos en la tribulación; constantes en la oración.»', 'Romanos 12:12'],
+    ['«He aquí, yo hago nuevas todas las cosas.»', 'Apocalipsis 21:5'],
+    ['«Cercano está Jehová a los quebrantados de corazón; y salva a los contritos de espíritu.»', 'Salmo 34:18']
+  ];
+  var TIPS = [
+    ['Espiritual', 'Antes de mirar el celular, orá dos minutos con tus palabras. No hace falta que sea lindo: alcanza con que sea sincero.'],
+    ['Psicológico', 'Cuando una preocupación te dé vueltas, anotala. Lo escrito ocupa menos lugar en la cabeza que lo repetido.'],
+    ['Cuerpo', 'Tomá un vaso de agua y movete 10 minutos. El cuerpo y el ánimo se influyen más de lo que parece.'],
+    ['Psicológico', 'Ponele nombre a lo que sentís: «estoy cansado», «estoy triste», «estoy enojado». Nombrarlo lo vuelve más manejable.'],
+    ['Espiritual', 'Leé un salmo despacio, en voz baja. Quedate con una sola frase para todo el día.'],
+    ['Vínculos', 'Escribile hoy a una persona que quieras. Un mensaje corto también es compañía.'],
+    ['Psicológico', 'Elegí una sola prioridad para hoy. Una cosa terminada pesa más que diez empezadas.'],
+    ['Cuerpo', 'Apagá las pantallas 30 minutos antes de dormir. El sueño es una de las mejores medicinas para el ánimo.'],
+    ['Espiritual', 'Antes de dormir, agradecé tres cosas del día, aunque sean pequeñas.'],
+    ['Psicológico', 'Si te criticás, preguntate: ¿le hablaría así a un amigo? Cambiá la frase por una más amable.'],
+    ['Vínculos', 'Escuchá sin interrumpir y repetí lo que entendiste antes de responder. Evita muchas peleas.'],
+    ['Cuerpo', 'Respirá 4 segundos adentro, 4 sostener, 6 afuera. Repetilo tres veces cuando sientas tensión.'],
+    ['Espiritual', 'Entregá en oración una carga concreta, con nombre y apellido. Después soltala: no es tuya sola.'],
+    ['Psicológico', 'Separá lo que depende de vos de lo que no. Poné tu energía solo en lo primero.'],
+    ['Cuerpo', 'Salí a la luz natural unos minutos por la mañana. Ayuda a ordenar el sueño y el ánimo.'],
+    ['Vínculos', 'Pedí lo que necesitás con «yo necesito…» en lugar de reproches. Se entiende mucho mejor.'],
+    ['Espiritual', 'Si dudás, decíselo a Dios tal cual: «ayuda mi incredulidad». La honestidad es un buen comienzo.'],
+    ['Psicológico', 'Hacé una pausa de 5 minutos sin pantalla. Mirá por la ventana y respirá.'],
+    ['Cuerpo', 'Comé algo real a horario. Un cuerpo en ayunas o con mucha cafeína vive todo más intenso.'],
+    ['Espiritual', 'Perdonar es un proceso: empezá por pedir en oración las ganas de perdonar, aunque todavía no las sientas.'],
+    ['Psicológico', 'Anotá tres cosas que hiciste bien hoy. El cerebro recuerda más lo que falla; entrenalo a ver también lo que sale bien.'],
+    ['Vínculos', 'Agradecé hoy a alguien por algo concreto. Fortalece a quien lo recibe y a vos.'],
+    ['Psicológico', 'Dejá un horario para preocuparte (15 minutos) y fuera de ese horario, anotá y postergá.'],
+    ['Espiritual', 'Sumate a una comunidad o grupo. La fe y el ánimo se sostienen mejor en compañía.'],
+    ['Cuerpo', 'Estirá cuello y hombros un minuto cada dos horas. La tensión del cuerpo alimenta la del ánimo.'],
+    ['Psicológico', 'Pedir ayuda es un acto de valentía. Contale a alguien de confianza o a un profesional lo que te pasa.']
+  ];
+  var ROUTINE = [
+    { n: 'Mañana', icon: '☀', items: ['Orá dos minutos antes de mirar el celular', 'Respirá 4-4-6, tres veces', 'Leé el versículo de hoy y quedate con una frase', 'Elegí tu prioridad del día (una sola cosa)'] },
+    { n: 'Tarde', icon: '◐', items: ['Movete 10 o 15 minutos: caminá o estirá', 'Tomá agua y comé algo real', 'Hacé una pausa de 5 minutos sin pantalla', 'Escribile o llamá a una persona'] },
+    { n: 'Noche', icon: '☾', items: ['Anotá tres cosas buenas del día', 'Escribí lo que quedó pendiente y dejalo para mañana', 'Orá agradeciendo y entregando el día', 'Apagá las pantallas 30 minutos antes de dormir'] }
+  ];
+  var GUIDE = [
+    { n: 'Cuerpo', d: 'El ánimo se apoya en el cuerpo.', t: ['Dormí 7 a 8 horas y acostate a horario.', 'Movete todos los días, aunque sea una caminata corta.', 'Tomá agua y comé a horario; evitá el exceso de cafeína y de alcohol.', 'Usá la respiración 4-4-6 cuando sientas tensión.', 'Salí a la luz natural por la mañana.'] },
+    { n: 'Mente', d: 'Ordená lo que pensás, sin pelearte con vos.', t: ['Anotá las preocupaciones y separá lo que podés resolver de lo que no.', 'Ponele nombre a lo que sentís: lo que se nombra pesa menos.', 'Reemplazá la crítica dura por una frase como la que le dirías a un amigo.', 'Limitá las noticias y las redes cuando estés sensible.', 'Dividí lo grande en pasos pequeños y hacé solo el próximo.'] },
+    { n: 'Espíritu', d: 'Un hábito simple sostiene más que un esfuerzo grande.', t: ['Orá todos los días con palabras sencillas, sin apuro.', 'Leé un salmo por día, despacio.', 'Agradecé tres cosas antes de dormir.', 'Guardá cinco minutos de silencio: sin pedir, solo estar.', 'Participá de una comunidad: la fe se sostiene en compañía.', 'Pedí en oración las ganas de perdonar, aunque todavía no las sientas.'] },
+    { n: 'Vínculos', d: 'Nadie sana del todo solo.', t: ['Escuchá sin interrumpir y repetí lo que entendiste.', 'Hablá desde lo que sentís («me dolió»), no desde el reproche.', 'Pedí lo que necesitás con «yo necesito…».', 'Pedí perdón primero cuando corresponda.', 'Reservá un rato de calidad con quien querés, sin pantallas.'] },
+    { n: 'Cuándo pedir ayuda profesional', d: 'Pedir ayuda es un acto de valentía, no de debilidad.', t: ['Si lo que sentís dura semanas o te impide trabajar, dormir o vincularte.', 'Si hay ataques de pánico, recuerdos que vuelven o miedo constante.', 'Si perdiste las ganas de vivir o pensás en hacerte daño: llamá ya al 135 (Buenos Aires y GBA) o al 911.', 'Si hay violencia en casa: 144 (violencia de género) o 911.', 'Podés escribirle a Norberto por WhatsApp para coordinar una sesión.'] }
+  ];
+  var PLAN_DAYS = [
+    { n: 'Ponerle nombre', f: function (t) { return ['Hacé el paso 1 de este tema (marcá lo que te pasa y medí la intensidad)', 'Anotá en una frase qué es lo que más pesa', 'Contáselo a una persona de confianza o a Dios en oración']; } },
+    { n: 'Soltar la carga', f: function (t) { return ['Hacé el ejercicio de respiración 4-4-6', t.w + ' (escribilo y soltalo)', 'Leé la oración del tema en voz alta']; } },
+    { n: 'Cuidar el cuerpo', f: function (t) { return ['Caminá o movete 15 minutos', 'Tomá agua y comé a horario', 'Apagá las pantallas 30 minutos antes de dormir']; } },
+    { n: 'Acercarte a alguien', f: function (t) { return ['Escribile o llamá a una persona de confianza', 'Contale cómo estás con una frase honesta', 'Agradecé a quien te escuchó']; } },
+    { n: 'Tu palabra', f: function (t) { return ['Leé tres veces: ' + t.v[0] + ' (' + t.v[1] + ')', 'Orá con tus palabras, aunque sea corto', 'Anotá qué frase te llegó más']; } },
+    { n: 'Un paso concreto', f: function (t) { return [t.a[0], t.a[1], 'Reconocé y celebrá lo que lograste hoy']; } },
+    { n: 'Revisar y seguir', f: function (t) { return ['Releé lo que fuiste haciendo esta semana', 'Volvé a medir la intensidad (0 a 10) y compará', 'Decidí: seguir otra semana, elegir otro tema o pedir una sesión']; } }
+  ];
+
   /* ---------- almacenamiento ---------- */
   var memo = null;
-  function blank() { return { moods: {}, logs: [], done: {}, acts: {}, active: {} }; }
+  function blank() { return { moods: {}, logs: [], done: {}, acts: {}, active: {}, day: {}, plan: null }; }
   function load() {
     if (memo) return memo;
     try { var raw = localStorage.getItem(KEY); memo = raw ? Object.assign(blank(), JSON.parse(raw)) : blank(); } catch (e) { memo = blank(); }
@@ -181,32 +254,140 @@
     });
   }
 
-  /* ---------- Inicio ---------- */
-  function home() {
-    setNav('inicio');
-    var s = load(), today = dkey(), mood = s.moods[today];
+  /* ---------- Hoy (día a día) ---------- */
+  function dayIndex(d) { return Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5); }
+  function planDay() {
+    var pl = load().plan; if (!pl) return 0;
+    var a = new Date(pl.s + 'T00:00:00'), n = Math.floor((new Date(dkey() + 'T00:00:00') - a) / 864e5) + 1;
+    return Math.max(1, Math.min(7, n));
+  }
+  function planDone() { var pl = load().plan, c = 0; if (!pl) return 0; Object.keys(pl.done || {}).forEach(function () { c++; }); return c; }
+  function planTask(v, day, i, text, checked) {
+    return '<li><label><input type="checkbox" data-plan="' + day + '_' + i + '"' + (checked ? ' checked' : '') + '><span>' + text + '</span></label></li>';
+  }
+  function bindPlan(root) {
+    [].forEach.call(root.querySelectorAll('[data-plan]'), function (c) {
+      c.addEventListener('change', function () {
+        var st = load(); if (!st.plan) return; st.plan.done = st.plan.done || {};
+        var k = c.getAttribute('data-plan'); if (c.checked) st.plan.done[k] = 1; else delete st.plan.done[k]; mark(); save();
+        var o = root.querySelector('#plancount'); if (o) o.textContent = planDone();
+      });
+    });
+  }
+
+  function today() {
+    setNav('hoy');
+    var s = load(), now = new Date(), tk = dkey(now), mood = s.moods[tk];
     var v = el('<div></div>');
-    var html = '<section class="hero"><div class="eyebrow">Mi espacio</div><h1>Un lugar para empezar de nuevo</h1>' +
-      '<p>Elegí lo que estás viviendo y recorré el método de las sesiones, paso a paso: <b>poner nombre</b> a lo que sentís, <b>soltar la carga</b> y <b>reconstruir</b>. Lo que escribas queda solo en tu dispositivo.</p></section>';
+    var verse = VERSES[dayIndex(now) % VERSES.length], tip = TIPS[dayIndex(now) % TIPS.length];
+    var dateTxt = now.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' });
+    var html = '<section class="hero"><div class="eyebrow">Hoy · ' + dateTxt + '</div><h1>Tu día, paso a paso</h1>' +
+      '<p>Una guía espiritual y psicológica para el día a día: una palabra, un consejo y pequeñas acciones que podés hacer hoy.</p></section>';
     html += '<section class="card" aria-labelledby="mh"><h2 id="mh" style="font-size:1.3rem">¿Cómo estás hoy?</h2><div class="mood" role="group" aria-label="Cómo estás hoy">';
     MOODS.forEach(function (m, i) { html += '<button type="button" data-mood="' + (i + 1) + '" aria-pressed="' + (mood === i + 1) + '">' + m + '</button>'; });
     html += '</div><p id="moodmsg" class="help" aria-live="polite" style="border:0;margin:10px 0 0;padding:0">' + (mood ? 'Registraste tu día. Podés cambiarlo cuando quieras.' : 'Un registro por día te ayuda a ver tu avance.') + '</p></section>';
+    html += '<section class="card"><div class="eyebrow">Versículo de hoy</div><blockquote class="verse" style="margin:10px 0 0">' + verse[0] + '<cite>' + verse[1] + '</cite></blockquote></section>';
+    html += '<section class="card"><div class="eyebrow">Consejo de hoy · ' + tip[0] + '</div><p style="margin:8px 0 0;font-size:1.08rem">' + tip[1] + '</p></section>';
+    // rutina
+    var chk = s.day[tk] || [], total = 0; ROUTINE.forEach(function (b) { total += b.items.length; });
+    html += '<section class="card" style="margin-top:16px"><div class="row" style="justify-content:space-between;align-items:baseline"><h2 style="font-size:1.3rem">Tu rutina de hoy</h2><span class="help" style="border:0;margin:0;padding:0" aria-live="polite"><b id="rcount">' + chk.length + '</b> de ' + total + '</span></div>' +
+      '<p style="color:var(--muted);margin:6px 0 0">No hace falta hacerlo todo. Con una o dos cosas por momento del día ya estás cuidándote.</p>';
+    var n = 0;
+    ROUTINE.forEach(function (bl) {
+      html += '<h3 class="blk">' + bl.n + '</h3><ul class="acts">';
+      bl.items.forEach(function (it) { html += '<li><label><input type="checkbox" data-r="' + n + '"' + (chk.indexOf(n) > -1 ? ' checked' : '') + '><span>' + it + '</span></label></li>'; n++; });
+      html += '</ul>';
+    });
+    html += '</section>';
+    // plan de 7 días
+    var pl = s.plan;
+    if (pl && byId(pl.t)) {
+      var t = byId(pl.t), pd = planDay(), tasks = PLAN_DAYS[pd - 1].f(t);
+      html += '<section class="card"><div class="eyebrow">Tu plan de 7 días · ' + t.n + '</div><h2 style="font-size:1.3rem;margin-top:4px">Día ' + pd + ': ' + PLAN_DAYS[pd - 1].n + '</h2><ul class="acts">';
+      tasks.forEach(function (x, i) { html += planTask(v, pd, i, x, pl.done && pl.done[pd + '_' + i]); });
+      html += '</ul><p class="help" style="border:0;margin:0;padding:0"><b id="plancount">' + planDone() + '</b> de 21 tareas hechas</p><div class="row" style="margin-top:12px"><a class="btn alt" href="#plan">Ver los 7 días</a></div></section>';
+    } else {
+      html += '<section class="card"><div class="eyebrow">Plan de 7 días</div><h2 style="font-size:1.3rem;margin-top:4px">Elegí un tema y empezá un plan</h2><p style="color:var(--muted)">Cada día de la semana tiene tareas pequeñas para ese tema: ponerle nombre, soltar, cuidar el cuerpo, acercarte a alguien, tu palabra, un paso concreto y una revisión.</p><a class="btn" href="#temas">Elegir un tema</a></section>';
+    }
+    html += '<p class="foot"><b>Importante:</b> esta aplicación es una guía de apoyo. No hace diagnósticos ni reemplaza una consulta. ' + SAFETY + '</p>';
+    v.innerHTML = html;
+    [].forEach.call(v.querySelectorAll('[data-mood]'), function (b) {
+      b.addEventListener('click', function () {
+        load().moods[tk] = +b.getAttribute('data-mood'); mark(); save();
+        [].forEach.call(v.querySelectorAll('[data-mood]'), function (o) { o.setAttribute('aria-pressed', o === b); });
+        v.querySelector('#moodmsg').textContent = 'Listo, anotamos tu día: ' + MOODS[+b.getAttribute('data-mood') - 1] + '.';
+      });
+    });
+    [].forEach.call(v.querySelectorAll('[data-r]'), function (c) {
+      c.addEventListener('change', function () {
+        var st = load(), arr = st.day[tk] || [], k = +c.getAttribute('data-r'), i = arr.indexOf(k);
+        if (c.checked && i < 0) arr.push(k); if (!c.checked && i > -1) arr.splice(i, 1);
+        st.day[tk] = arr; mark(); save(); v.querySelector('#rcount').textContent = arr.length;
+        var keys = Object.keys(st.day); if (keys.length > 120) { keys.sort(); delete st.day[keys[0]]; }
+      });
+    });
+    bindPlan(v);
+    return v;
+  }
+
+  function home() { return today(); }
+
+  /* ---------- Temas ---------- */
+  function topicsView() {
+    setNav('temas');
+    var v = el('<div></div>');
+    var html = '<section class="hero"><div class="eyebrow">Temas</div><h1>¿Qué estás viviendo?</h1>' +
+      '<p>Elegí un tema y recorré el método de las sesiones: <b>poner nombre</b> a lo que sentís, <b>soltar la carga</b> y <b>reconstruir</b>. También podés empezar un plan de 7 días para ese tema.</p></section>';
     GROUPS.forEach(function (g) {
       html += '<section class="group"><div class="eyebrow">' + g.n + '</div><h2>' + (g.id === 'emociones' ? '¿Qué estás sintiendo?' : g.id === 'heridas' ? '¿Qué te dejó una herida?' : g.id === 'vinculos' ? '¿Cómo están tus vínculos?' : '¿Qué necesita tu interior?') + '</h2><div class="grid">';
       TOPICS.filter(function (t) { return t.g === g.id; }).forEach(function (t) {
-        var c = doneCount(t.id);
-        html += '<a class="topic" href="#t-' + t.id + '"><strong>' + t.n + '</strong><span>' + t.b + '</span>' + (c ? '<em>' + (c === 3 ? 'Completado' : c + ' de 3 pasos') + '</em>' : '') + '</a>';
+        var c = doneCount(t.id), pl = load().plan;
+        html += '<a class="topic" href="#t-' + t.id + '"><strong>' + t.n + '</strong><span>' + t.b + '</span>' + (c ? '<em>' + (c === 3 ? 'Completado' : c + ' de 3 pasos') + '</em>' : '') + (pl && pl.t === t.id ? '<em>Plan de 7 días en curso</em>' : '') + '</a>';
       });
       html += '</div></section>';
     });
     html += '<p class="foot"><b>Importante:</b> esta aplicación es una guía de apoyo. No hace diagnósticos ni reemplaza una consulta. ' + SAFETY + '</p>';
     v.innerHTML = html;
-    [].forEach.call(v.querySelectorAll('[data-mood]'), function (b) {
-      b.addEventListener('click', function () {
-        load().moods[today] = +b.getAttribute('data-mood'); mark(); save();
-        [].forEach.call(v.querySelectorAll('[data-mood]'), function (o) { o.setAttribute('aria-pressed', o === b); });
-        v.querySelector('#moodmsg').textContent = 'Listo, anotamos tu día: ' + MOODS[+b.getAttribute('data-mood') - 1] + '.';
-      });
+    return v;
+  }
+
+  /* ---------- Guía ---------- */
+  function guideView() {
+    setNav('guia');
+    var v = el('<div></div>');
+    var html = '<section class="hero"><div class="eyebrow">Guía</div><h1>Tips y recomendaciones</h1><p>Hábitos simples para el cuerpo, la mente, el espíritu y los vínculos. Elegí uno y empezá hoy.</p></section>';
+    GUIDE.forEach(function (g, gi) {
+      html += '<details class="acc"' + (gi === 0 ? ' open' : '') + '><summary><b>' + g.n + '</b><span>' + g.d + '</span></summary><ul class="tips">';
+      g.t.forEach(function (x) { html += '<li>' + x + '</li>'; });
+      html += '</ul></details>';
+    });
+    html += '<section class="card" style="margin-top:20px"><h2 style="font-size:1.25rem">¿Querés acompañamiento?</h2><p style="color:var(--muted)">La guía te acompaña entre sesiones, pero no reemplaza hablar con una persona.</p><a class="btn wa" href="' + waLink('') + '" target="_blank" rel="noopener">Escribirle a Norberto por WhatsApp</a></section>';
+    html += '<p class="foot"><b>Importante:</b> ' + SAFETY + '</p>';
+    v.innerHTML = html;
+    return v;
+  }
+
+  /* ---------- Plan de 7 días ---------- */
+  function planView() {
+    setNav('hoy');
+    var s = load(), pl = s.plan, v = el('<div></div>');
+    if (!pl || !byId(pl.t)) { location.hash = '#temas'; return el('<div></div>'); }
+    var t = byId(pl.t), pd = planDay();
+    var html = '<a class="back" href="#hoy">← Volver a hoy</a><div class="eyebrow">Plan de 7 días</div><h1 style="font-size:clamp(1.8rem,5vw,2.6rem);margin:4px 0 8px">' + t.n + '</h1><p style="color:var(--muted)">Una semana, un paso por día. Hacé lo que puedas: lo importante es volver mañana. <b id="plancount">' + planDone() + '</b> de 21 tareas hechas.</p>';
+    PLAN_DAYS.forEach(function (d, i) {
+      var day = i + 1, tasks = d.f(t);
+      html += '<details class="acc"' + (day === pd ? ' open' : '') + '><summary><b>Día ' + day + (day === pd ? ' · hoy' : '') + '</b><span>' + d.n + '</span></summary><ul class="acts" style="margin:10px 0 0">';
+      tasks.forEach(function (x, k) { html += planTask(v, day, k, x, pl.done && pl.done[day + '_' + k]); });
+      html += '</ul></details>';
+    });
+    html += '<div class="row" style="margin-top:20px"><a class="btn wa" href="' + waLink(t.n) + '" target="_blank" rel="noopener">Agendar una sesión por WhatsApp</a><button type="button" class="btn alt" id="resetplan">Cambiar o reiniciar el plan</button></div><div id="resetmsg"></div>';
+    v.innerHTML = html;
+    bindPlan(v);
+    var rm = v.querySelector('#resetmsg');
+    v.addEventListener('click', function (e) {
+      if (e.target.id === 'resetplan') rm.innerHTML = '<p class="note">¿Seguro? Se borra el avance de este plan.</p><div class="row"><button type="button" class="btn" id="yesplan">Sí, reiniciar</button><button type="button" class="btn alt" id="noplan">Cancelar</button></div>';
+      else if (e.target.id === 'noplan') rm.innerHTML = '';
+      else if (e.target.id === 'yesplan') { load().plan = null; save(); location.hash = '#temas'; }
     });
     return v;
   }
@@ -217,13 +398,14 @@
   function topicView(id) {
     var t = byId(id);
     if (!t) return home();
-    setNav('inicio');
+    setNav('temas');
     if (cur.id !== id) cur = { id: id, step: 1, intensity: 5, signs: [] };
     var v = el('<div></div>');
     function render() {
       clearTimers();
       var d = load().done[id] || {};
-      var html = '<a class="back" href="#inicio">← Todos los temas</a><div class="eyebrow">Tema</div><h1 style="font-size:clamp(1.8rem,5vw,2.6rem);margin:4px 0 8px">' + t.n + '</h1><p style="color:var(--muted)">' + t.q + '</p>';
+      var html = '<a class="back" href="#temas">← Todos los temas</a><div class="eyebrow">Tema</div><h1 style="font-size:clamp(1.8rem,5vw,2.6rem);margin:4px 0 8px">' + t.n + '</h1><p style="color:var(--muted)">' + t.q + '</p>' +
+        '<div class="row" style="margin:0 0 4px"><button type="button" class="btn alt" id="startplan">' + ((load().plan && load().plan.t === id) ? 'Ver mi plan de 7 días' : 'Empezar un plan de 7 días') + '</button></div><div id="planmsg"></div>';
       html += '<div class="steps" role="group" aria-label="Pasos">';
       [['Ponerle nombre', 1], ['Soltar la carga', 2], ['Reconstruir', 3]].forEach(function (s) {
         html += '<button type="button" data-step="' + s[1] + '" class="' + (d['s' + s[1]] ? 'done' : '') + '"' + (cur.step === s[1] ? ' aria-current="step"' : '') + '><b>' + s[1] + '</b>' + s[0] + '</button>';
@@ -232,6 +414,17 @@
       html += '<p class="help"><b>Cuándo pedir ayuda profesional:</b> ' + t.h + '</p>';
       v.innerHTML = html;
       [].forEach.call(v.querySelectorAll('[data-step]'), function (b) { b.addEventListener('click', function () { cur.step = +b.getAttribute('data-step'); render(); window.scrollTo({ top: 0 }); }); });
+      v.querySelector('#startplan').addEventListener('click', function () {
+        var st = load();
+        if (st.plan && st.plan.t === id) { location.hash = '#plan'; return; }
+        if (st.plan && byId(st.plan.t)) {
+          v.querySelector('#planmsg').innerHTML = '<p class="note">Ya tenés un plan en curso (' + byId(st.plan.t).n + '). ¿Querés cambiarlo por este?</p><div class="row"><button type="button" class="btn" id="swap">Sí, cambiar</button><button type="button" class="btn alt" id="keep">No, dejarlo</button></div>';
+          v.querySelector('#swap').addEventListener('click', function () { st.plan = { t: id, s: dkey(), done: {} }; mark(); save(); location.hash = '#hoy'; });
+          v.querySelector('#keep').addEventListener('click', function () { v.querySelector('#planmsg').innerHTML = ''; });
+          return;
+        }
+        st.plan = { t: id, s: dkey(), done: {} }; mark(); save(); location.hash = '#hoy';
+      });
       var body = v.querySelector('#stepbody');
       if (cur.step === 1) step1(body); else if (cur.step === 2) step2(body); else step3(body);
     }
@@ -319,7 +512,7 @@
         advance(3);
         var f = body.querySelector('#fmsg');
         f.innerHTML = '<div class="note"><b>Completaste este tema.</b> Cada paso cuenta. Volvé a este espacio cuando lo necesites. Si querés trabajarlo en profundidad, podés pedir una sesión.</div>' +
-          '<div class="row"><a class="btn wa" href="' + waLink(t.n) + '" target="_blank" rel="noopener">Agendar una sesión por WhatsApp</a><a class="btn alt" href="#inicio">Elegir otro tema</a><a class="btn alt" href="#camino">Ver mi camino</a></div>';
+          '<div class="row"><a class="btn wa" href="' + waLink(t.n) + '" target="_blank" rel="noopener">Agendar una sesión por WhatsApp</a><a class="btn alt" href="#temas">Elegir otro tema</a><a class="btn alt" href="#camino">Ver mi camino</a></div>';
         f.scrollIntoView({ behavior: 'smooth', block: 'center' });
         [].forEach.call(v.querySelectorAll('.steps button'), function (b) { b.classList.add('done'); });
       });
@@ -358,6 +551,7 @@
       });
       html += '</ul>';
     }
+    if (s.plan && byId(s.plan.t)) html += '</section><section class="card"><h2 style="font-size:1.25rem">Plan de 7 días</h2><p style="color:var(--muted);margin:0 0 10px">' + byId(s.plan.t).n + ' · ' + planDone() + ' de 21 tareas hechas · día ' + planDay() + ' de 7</p><a class="btn alt" href="#plan">Ver mi plan</a>';
     html += '</section><section class="card"><h2 style="font-size:1.25rem">¿Querés acompañamiento?</h2><p style="color:var(--muted)">La aplicación te acompaña entre sesiones, pero no reemplaza hablar con una persona.</p><a class="btn wa" href="' + waLink('') + '" target="_blank" rel="noopener">Escribirle a Norberto por WhatsApp</a></section>';
     html += '<section class="card"><h2 style="font-size:1.25rem">Tus datos</h2><p style="color:var(--muted)">Se guardan solo en este navegador. Nadie más puede verlos y no se envían a ningún servidor.</p><div id="wipearea"><button type="button" class="btn alt" id="wipe">Borrar todos mis datos</button></div></section>';
     v.innerHTML = html;
@@ -373,13 +567,16 @@
   /* ---------- ruteo ---------- */
   function route() {
     clearTimers();
-    var h = (location.hash || '#inicio').slice(1), node;
+    var h = (location.hash || '#hoy').slice(1), node;
     if (h.indexOf('t-') === 0) node = topicView(h.slice(2));
     else if (h === 'camino') node = progress();
-    else node = home();
+    else if (h === 'temas' || h === 'inicio') node = topicsView();
+    else if (h === 'guia') node = guideView();
+    else if (h === 'plan') node = planView();
+    else node = today();
     $view.innerHTML = ''; $view.appendChild(node);
     window.scrollTo({ top: 0 });
-    document.title = (h.indexOf('t-') === 0 && byId(h.slice(2)) ? byId(h.slice(2)).n + ' · ' : h === 'camino' ? 'Mi camino · ' : '') + 'Mi espacio · Volver a Empezar';
+    document.title = (h.indexOf('t-') === 0 && byId(h.slice(2)) ? byId(h.slice(2)).n + ' · ' : h === 'camino' ? 'Mi camino · ' : h === 'guia' ? 'Guía · ' : h === 'temas' ? 'Temas · ' : h === 'plan' ? 'Plan de 7 días · ' : '') + 'Mi espacio · Volver a Empezar';
   }
   window.addEventListener('hashchange', route);
   route();
